@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Librerias utilizadas-->
+    <!--SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Luxon-->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
+    
+    <title>Proyecto final </title>
+    <link rel="stylesheet" type="text/css" href="/styles.css" >
+  </head>
+  <body>
+  <header>
+    <h1>Registro</h1>
+  </header>
+      <form id="form">
+        <input class="input" type="text" id="inputNS" placeholder="Nombre completo" />
+        <input class="input" type="number" id="g1" placeholder="Primera nota">
+        <input class="input" type="number" id="g2" placeholder="Segunda nota">
+        <input class="input" type="number" id="g3" placeholder="Tercera nota">
+        <button class="button" type="submit">Agregar</button>
+      </form>   
+
+      <h2 id="title"> Estudiantes Registrados</h2>
+
+      <div id="content">
+
+      </div>
+
+      <br>
+
+      <div>
+        <button class="button" type="submit" id="saveStorage">Guardar</button>
+        <button class="button" type="submit" id="clearStorage">Borrar</button>
+      </div>
+      
+      <div id="title2">
+        <h2>Historial</h2>
+        <p>Consultas Recientes:</p>
+      
+      <div id="hist">
+      </div>
+
+      </div>
+      <div id="box">
+      <div class="users">
+        <h2 id="title3">Algunos de nuestros egresados</h2>
+        <ul id="users"></ul>
+      </div>
+    </div>
+      <footer>
+        <div>
+          <h3>Proyecto final por: Manuel Salazar</h3>
+          <p>Comision: 43125</p>
+        </div>
+      </footer>
+    <script src="./main.js"></script>
+  </body>
+</html
