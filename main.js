@@ -127,7 +127,7 @@ const congrat = (avg) => {
       position: "top-end",
       icon: "success",
       title: "Felicidades! Aprobaste.",
-      showConfirmButton: true,
+      showConfirmButton: false,
       timer: 4000,
     });
   } else {
@@ -135,7 +135,7 @@ const congrat = (avg) => {
       position: "top-end",
       icon: "error",
       title: "Lamentablemente no aprobo el curso",
-      showConfirmButton: true,
+      showConfirmButton: false,
       timer: 4000,
     });
   }
@@ -175,6 +175,28 @@ fetch("https://jsonplaceholder.typicode.com/users/")
         console.log("Proceso Terminado");
       });
   });
+
+  // Generacion de reloj en el DOM
+
+  const hTime = document.getElementById('time');
+  const hDate = document.getElementById('date');
+
+  const months =["Enero","Febrerp","Marzo",
+                  "Abril","Mayo","Junio",
+                  "Julio","Agosto","Septiembre",
+                  "Octubre","Noviembre","Diciembre"];
+
+  const interval = setInterval(() =>{
+    const local = new Date();
+
+    let day = local.getDate(),
+        month = local.getMonth(),
+        year = local.getFullYear();
+    
+    hTime.innerHTML = local.toLocaleTimeString();
+    hDate.innerHTML = `${day} de ${months[month]} del ${year}`;
+
+  },1000);
 
 // Invocacion de funcion
 getfromStorage();
